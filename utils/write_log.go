@@ -16,3 +16,7 @@ func WriteLog(contents ...string) {
 		file.WriteString(content + "\n")
 	}
 }
+
+func init() {
+	os.Truncate(LogPath, 0)
+}
